@@ -22,5 +22,24 @@ class UserController extends Controller
         return view('user.listuser', compact('users'));
     }
 
+    public function create(){
+        return view('user.adduser');
+    }
+    public function store(AddUserRequest $request){
+        
+        $this->user->create([
+            'fullname' => $request->fullname,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone' => $request->phone,
+            'level' => $request->level,
+            'address' => $request->address
+        ]);
+       
+
+        return redirect()->route('user.index')->with('success', 'Thêm người dùng thành công');
+       
+    }
+
    
 }

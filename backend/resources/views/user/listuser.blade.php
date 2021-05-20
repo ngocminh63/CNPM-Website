@@ -45,6 +45,8 @@
 								@endif
 							</td>
 							<td>
+								<a href="{{route('user.edit', ['id' => $user->id])}}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Sửa</a>
+
 								</td>
 						</tr>
 					@endforeach
