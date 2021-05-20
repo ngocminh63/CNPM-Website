@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,14 @@ Route::post('/login',[AdminController::class, 'postLoginAdmin']);
 
 Route::group(['prefix'=>'admin','namespace' => 'Admin','middleware'=>'CheckLogin'], function() {
     Route::get('/logout',[AdminController::class, 'logout'])->name('logout');
+    Route::group(['prefix' => 'user','namespace' => 'User'], function() {
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::get('/create', [UserController::class, 'create'])->name('user.create');
+        Route::post('/store', [UserController::class, 'store'])->name('user.store');
+        Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
+        Route::post('/update/{id}', [UserController::class, 'update'])->name('user.update');
+        Route::get('/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
+    });
     
 
 });
