@@ -41,5 +41,21 @@ class UserController extends Controller
        
     }
 
+    public function edit($id){
+        $user = $this->user->find($id);
+        return view('user.edituser', compact('user'));
+    }
+    public function update(EditUserRequest $request, $id){
+        $this->user->find($id)->update([
+            'fullname' => $request->fullname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'level' => $request->level,
+            'address' => $request->address
+        ]);
+
+        return redirect()->route('user.index')->with('success', 'Sửa thông tin người dùng thành công');
+    }
+
    
 }
