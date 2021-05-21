@@ -34,6 +34,16 @@ Route::group(['prefix'=>'admin','namespace' => 'Admin','middleware'=>'CheckLogin
         Route::post('/update/{id}', [UserController::class, 'update'])->name('user.update');
         Route::get('/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
     });
+
+    Route::prefix('categories')->group(function () {
+        Route::get('/', [CategoryController::class, 'index'])->name('cate-index');
+        Route::get('/create', [CategoryController::class, 'create'])->name('cate-create');
+        Route::post('/store', [CategoryController::class, 'store'])->name('cate-store');
+        Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('cate-edit');
+        Route::post('/update/{id}', [CategoryController::class, 'update'])->name('cate-update');
+        Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('cate-delete');
+    });
+
     
 
 });
