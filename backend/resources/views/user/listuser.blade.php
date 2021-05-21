@@ -46,8 +46,8 @@
 							</td>
 							<td>
 								<a href="{{route('user.edit', ['id' => $user->id])}}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Sửa</a>
-
-								</td>
+								<a onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này?');" href="{{route('user.delete', ['id' => $user->id])}}"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
+							</td>
 						</tr>
 					@endforeach
 

@@ -57,5 +57,11 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'Sửa thông tin người dùng thành công');
     }
 
+    public function delete($id){
+        $this->user->find($id)->delete();
+
+        return redirect()->route('user.index')->with('success', 'Xóa người dùng thành công');
+    }
+
    
 }
