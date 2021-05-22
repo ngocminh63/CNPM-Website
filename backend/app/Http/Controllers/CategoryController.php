@@ -25,7 +25,7 @@ class CategoryController extends Controller
 
         return view('category.add',compact('htmlOption'));
     }
-    
+
     public function store(AddCategoryRequest $request){
         $this->category->create([
             'cate_name' => $request->cate_name,
@@ -44,5 +44,19 @@ class CategoryController extends Controller
         return $htmlOption;
     }
 
+    public function edit($id){
+        $category = $this->category->find($id);
+        $htmlOption = $this->getCategory($category->parent_id);
+        return view('category.edit', compact('category', 'htmlOption'));
+    }
+
+    public function update($id, EditCategoryRequest $request){
+        $this->category->find($id)->update([
+            'cate_name' => $request->cate_name,
+            'parent_id' => $request->parent_id,
+            'slug' => Str::slug($request->cate_name)
+        ]);
+        return redirect()->route('cate-index')->with('success', 'Sửa danh mục thành công');
+    }
 
 }

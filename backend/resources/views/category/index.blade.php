@@ -37,8 +37,8 @@
                 <td>{{ $categories->firstItem() + $key }}</td>
                 <td>{{$category->cate_name}}</td>
                 <td>
-                 {{-- <a href="{{route('cate-edit', ['id' => $category->id])}}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Sửa</a>
-                  <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?');" href="{{route('cate-delete', ['id' => $category->id])}}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a> --}}
+                 <a href="{{route('cate-edit', ['id' => $category->id])}}" class="btn btn-warning"><i class="fa fa-wrench" aria-hidden="true"></i> Sửa</a>
+                  <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?');" href="{{route('cate-delete', ['id' => $category->id])}}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
                 </td>
               </tr>
               @endforeach
