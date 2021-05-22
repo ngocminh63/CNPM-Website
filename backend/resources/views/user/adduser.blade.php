@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
-@section('title', 'Trang quản trị')
-
+@section('title')
+<title>Nhóm 10 | Quản Trị</title>
+@endsection
 @section('content')
 <?php include(app_path().'/Helpers/function.php'); ?>
     <!--main-->
