@@ -63,5 +63,11 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'Xóa người dùng thành công');
     }
 
+    public function show_delete(){
+
+        $users = DB::table('users')->where('deleted_at', '<>', NULL)->paginate(4);
+        return view('user.showdelete', compact('users'));
+    }
+
    
 }

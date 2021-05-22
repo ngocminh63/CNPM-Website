@@ -33,6 +33,7 @@ Route::group(['prefix'=>'admin','namespace' => 'Admin','middleware'=>'CheckLogin
         Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
         Route::post('/update/{id}', [UserController::class, 'update'])->name('user.update');
         Route::get('/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
+        Route::get('/showdelete', [UserController::class, 'show_delete'])->name('user.showdelete');
     });
 
     Route::prefix('categories')->group(function () {
