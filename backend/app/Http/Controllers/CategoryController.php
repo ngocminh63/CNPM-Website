@@ -20,50 +20,29 @@ class CategoryController extends Controller
         $categories = $this->category->latest()->paginate(4);
         return view('category.index', compact('categories'));
     }
+    public function create(){
+        $htmlOption = $this->getCategory($parentId = '');
 
-    // public function create(){
-    //     $htmlOption = $this->getCategory($parentId = '');
-
-    //     return view('category.add',compact('htmlOption'));
-    // }
-    // public function store(AddCategoryRequest $request){
-    //     $this->category->create([
-    //         'cate_name' => $request->cate_name,
-    //         'parent_id' => $request->parent_id,
-    //         'slug' => Str::slug($request->cate_name)
-    //     ]);
+        return view('category.add',compact('htmlOption'));
+    }
+    
+    public function store(AddCategoryRequest $request){
+        $this->category->create([
+            'cate_name' => $request->cate_name,
+            'parent_id' => $request->parent_id,
+            'slug' => Str::slug($request->cate_name)
+        ]);
         
-    //     return redirect()->route('cate-index')->with('success', 'Thêm danh mục thành công');
-    // }
+        return redirect()->route('cate-index')->with('success', 'Thêm danh mục thành công');
+    }
 
-    // public function getCategory($parentId){
-    //     $data = $this->category->all();
-    //     $recursive = new Recursive($data);
-    //     $htmlOption = $recursive->categoryRecursive($parentId);
+    public function getCategory($parentId){
+        $data = $this->category->all();
+        $recursive = new Recursive($data);
+        $htmlOption = $recursive->categoryRecursive($parentId);
 
-    //     return $htmlOption;
-    // }
-
-    // public function edit($id){
-    //     $category = $this->category->find($id);
-    //     $htmlOption = $this->getCategory($category->parent_id);
-    //     return view('category.edit', compact('category', 'htmlOption'));
-    // }
-
-    // public function update($id, EditCategoryRequest $request){
-    //     $this->category->find($id)->update([
-    //         'cate_name' => $request->cate_name,
-    //         'parent_id' => $request->parent_id,
-    //         'slug' => Str::slug($request->cate_name)
-    //     ]);
-    //     return redirect()->route('cate-index')->with('success', 'Sửa danh mục thành công');
-    // }
-
-    // public function delete($id){
-    //     $this->category->find($id)->delete();
-    //     return redirect()->route('cate-index')->with('success', 'Xóa danh mục thành công');
-    // }
-   
+        return $htmlOption;
+    }
 
 
 }
