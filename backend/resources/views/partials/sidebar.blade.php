@@ -27,6 +27,26 @@
                   </p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="{{route('cate-index')}}" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Quản Lý Danh Mục
+                    <span class="right badge badge-danger">New</span>
+                  </p>
+                </a>
+              </li>
+    
+
+              <li class="nav-item">
+                <a href="{{route('product.index')}}" class="nav-link">
+                  <i class="nav-icon fa fa-tablet" aria-hidden="true"></i>
+                  <p>
+                    Quản Lý Sản Phẩm
+                  </p>
+                </a>
+              </li>
           
 
           
