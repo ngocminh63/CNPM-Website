@@ -21,4 +21,38 @@ class ProductController extends Controller
         return view('product.listproduct', compact('products'));
     }
     
+    public function create(){
+        $htmlOption = $this->getCategory($parentId = '');
+        return view('product.addproduct', compact('htmlOption'));
+    }
+
+    public function getCategory($parentId){
+        $data = Category::all();
+        $recursive = new Recursive($data);
+        $htmlOption = $recursive->categoryRecursive($parentId);
+
+        return $htmlOption;
+    }
+
+    public function store(AddProductRequest $request){
+        $product = new Product();
+        $product->name = $request->name;
+        $product->code = $request->code;
+        $product->slug = Str::slug($request->name);
+        $product->price = $request->price;
+        $product->state = $request->state;
+        $product->categories_id = $request->categories_id;
+        
+        if($request->hasFile('image')){
+            $file = $request->image;
+            $file_name = Str::slug($request->name).'.'.$file->getClientOriginalExtension();
+            $path = public_path().'/uploads';
+            // Upload ảnh lên server
+            $file->move($path, $file_name);
+            // Lưu tên ảnh vào CSDL
+            $product->image = $file_name;
+        }
+        $product->save();
+        return redirect()->route('product.index')->with('success','Thêm sản phẩm thành công');
+    }
 }
