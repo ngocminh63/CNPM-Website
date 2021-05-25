@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 23, 2021 lúc 04:16 PM
+-- Thời gian đã tạo: Th5 25, 2021 lúc 05:50 AM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.3.6
 
@@ -47,10 +47,11 @@ INSERT INTO `categories` (`id`, `cate_name`, `parent_id`, `slug`, `created_at`, 
 (3, 'Phụ Kiện', 0, 'phu-kien', '2021-05-18 20:08:15', '2021-05-18 20:08:15'),
 (4, 'Iphone', 1, 'iphone', '2021-05-18 20:08:28', '2021-05-18 20:08:28'),
 (5, 'OPPO', 1, 'oppo', '2021-05-18 20:08:43', '2021-05-18 20:08:43'),
-(6, 'Iphone 8', 4, 'iphone-8', '2021-05-18 20:08:57', '2021-05-18 20:08:57'),
+(6, 'Iphone 83', 4, 'iphone-83', '2021-05-18 20:08:57', '2021-05-24 08:04:21'),
 (7, 'ASUS', 2, 'asus', '2021-05-18 20:09:17', '2021-05-18 20:09:17'),
 (8, 'Iphone 8 Plus', 4, 'iphone-8-plus', '2021-05-18 20:09:37', '2021-05-18 20:09:37'),
-(9, 'Acer', 2, 'acer', '2021-05-18 20:09:54', '2021-05-18 20:09:54');
+(9, 'Acer 3', 2, 'acer-3', '2021-05-18 20:09:54', '2021-05-24 08:01:39'),
+(10, 'Acer 33', 2, 'acer-33', '2021-05-24 08:02:05', '2021-05-24 08:02:05');
 
 -- --------------------------------------------------------
 
@@ -151,16 +152,16 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `MaHoaDon`, `customers_id`, `ships_id`, `TenNguoiNhan`, `DiaChiNhan`, `DienThoai`, `TrangThai`, `created_at`, `updated_at`) VALUES
-(1, 'HD06', 3, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 0, '2021-05-23 06:56:04', NULL),
+(1, 'HD06', 3, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 1, '2021-05-23 06:56:04', '2020-05-24 08:10:42'),
 (2, 'HD01', 2, 3, 'Dao Hai', 'thanh trì hà nội', '123456854', 1, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
 (3, 'HD02', 2, 2, 'Dao Hai', 'thanh trì nghệ an', '123456854', 1, '2021-05-18 20:11:19', '2021-05-22 17:00:00'),
-(4, 'HD03', 3, 1, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
+(4, 'HD03', 2, 1, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
 (5, 'HD04', 4, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-23 06:56:32'),
-(6, 'HD05', 2, 4, 'Dao Hai', 'thanh trì hà nội', '123456854', 1, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
+(6, 'HD05', 2, 4, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-24 08:10:55'),
 (7, 'HD07', 4, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 0, '2021-05-23 06:56:04', NULL),
 (8, 'HD08', 5, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 0, '2021-05-23 06:56:04', NULL),
-(9, 'HD09', 6, 3, 'Dao Hai', 'thanh trì nghệ an', '123456854', 0, '2021-05-23 06:56:04', NULL),
-(10, 'HD010', 4, 4, 'Dao Hai', 'thanh trì thanh hóa', '123456854', 0, '2021-05-23 06:56:04', NULL);
+(9, 'HD09', 2, 3, 'Dao Hai', 'thanh trì nghệ an', '123456854', 2, '2021-05-23 06:56:04', '2021-05-24 16:54:27'),
+(10, 'HD010', 2, 4, 'Dao Hai', 'thanh trì thanh hóa', '123456854', 1, '2021-05-23 06:56:04', '2021-05-24 16:54:52');
 
 -- --------------------------------------------------------
 
@@ -185,7 +186,7 @@ INSERT INTO `order_details` (`id`, `quantity`, `products_id`, `orders_id`, `crea
 (1, 2, 2, 3, NULL, NULL),
 (2, 3, 3, 2, NULL, NULL),
 (3, 3, 4, 2, NULL, NULL),
-(4, 1, 1, 5, NULL, NULL),
+(4, 1, 1, 4, NULL, NULL),
 (5, 3, 3, 5, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -226,7 +227,7 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `code`, `slug`, `image`, `price`, `state`, `categories_id`, `created_at`, `updated_at`) VALUES
 (1, 'iphonn 8 plus like new', 'sp01', 'iphonn-8-plus-like-new', 'iphonn-8-plus-like-new.PNG', '1500000.00', 1, 6, '2021-05-18 20:11:19', '2021-05-18 20:16:32'),
 (2, 'iphone 8 new', 'sp02', 'iphone-8-new', 'iphone-8-new.jpg', '2500000.00', 1, 4, '2021-05-18 20:15:18', '2021-05-18 20:15:18'),
-(3, 'Acer gaming', 'sp03', 'acer-gaming', 'acer-gaming.jpg', '1500000000.00', 0, 9, '2021-05-18 20:16:01', '2021-05-18 20:16:01'),
+(3, 'Acer gaming', 'sp03', 'acer-gaming', 'acer-gaming.jpg', '1500000.00', 0, 9, '2021-05-18 20:16:01', '2021-05-18 20:16:01'),
 (4, 'tai nghe sony', 'sp04', 'tai-nghe-sony', 'tai-nghe-sony.jpg', '1500000.00', 0, 3, '2021-05-18 20:17:14', '2021-05-18 20:17:14');
 
 -- --------------------------------------------------------
@@ -365,7 +366,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `customers`
