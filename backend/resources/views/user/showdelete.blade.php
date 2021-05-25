@@ -51,6 +51,8 @@
 		  </div>
 		  <div class="col-md-12">
 			{{ $users->links() }}
+			<a href="{{route('user.index')}}" class="btn btn-success" type="button">Trở về</a>
+
 		  </div>
 		  </div>
 		  <!-- /.row -->

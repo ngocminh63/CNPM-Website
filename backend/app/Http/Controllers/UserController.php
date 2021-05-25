@@ -7,18 +7,13 @@ use App\Models\User;
 use App\Http\Requests\AddUserRequest;
 use App\Http\Requests\EditUserRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-
-    private $user;
-    public function __construct(User $user){
-        $this->user = $user;
-    }
-
     public function index(){
 
-        $users = $this->user->latest()->paginate(4);
+        $users = User::latest()->paginate(4);
         return view('user.listuser', compact('users'));
     }
 
@@ -27,7 +22,7 @@ class UserController extends Controller
     }
     public function store(AddUserRequest $request){
         
-        $this->user->create([
+        User::create([
             'fullname' => $request->fullname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -40,9 +35,8 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'Thêm người dùng thành công');
        
     }
-
     public function edit($id){
-        $user = $this->user->find($id);
+        $user = User::find($id);
         return view('user.edituser', compact('user'));
     }
     public function update(EditUserRequest $request, $id){
@@ -58,7 +52,7 @@ class UserController extends Controller
     }
 
     public function delete($id){
-        $this->user->find($id)->delete();
+        User::find($id)->delete();
 
         return redirect()->route('user.index')->with('success', 'Xóa người dùng thành công');
     }
@@ -68,6 +62,4 @@ class UserController extends Controller
         $users = DB::table('users')->where('deleted_at', '<>', NULL)->paginate(4);
         return view('user.showdelete', compact('users'));
     }
-
-   
 }
