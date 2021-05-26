@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar">       
+                <img class="logo" src="logo.png">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Giỏ hàng</a></li>
+                    <li><a class="active" href="signup.html">Đăng ký</a></li>
+                    <li><a href="login.html">Đăng nhập</a></li>
+                </ul>
+        </nav>
+    </div>
+    
+        <div class="pagecontainer">
+            <form action="action_page.php" style="border:5px solid #ccc">
+                <div class="container">
+                    <h1>Đăng ký tài khoản</h1>
+                    <p>Hãy hoàn tất thông tin trong ô trống để đăng ký tài khoản.</p>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Điền email" name="email" required>
+
+                    <label for="psw"><b>Mật khẩu</b></label>
+                    <input type="password" placeholder="Điền mật khẩu" name="psw" required>
+
+                    <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ mật khẩu
+                    </label>
+
+                    <p>Tạo tài khoản bạn đồng nghĩa với việc bạn đồng ý với <a href="#" style="color:dodgerblue">Điều khoản và luật pháp</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Hủy bỏ</button>
+                        <button type="submit" class="signupbtn">Đăng ký</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
