@@ -18,6 +18,13 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
+
+          @if(session('success'))
+          <div class="alert bg-success" role="alert">
+            {{session('success')}} 
+          </div>
+        @endif
+
           <div class="col-md-12">
           <a href="{{ route('product.create') }}" class="btn btn-success float-right m-2">ADD</a>
           <div class="float-right m-2">
