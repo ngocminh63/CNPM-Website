@@ -54,8 +54,6 @@ Route::group(['prefix'=>'admin','namespace' => 'Admin','middleware'=>'CheckLogin
         Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
         Route::post('/update/{id}', [ProductController::class, 'update'])->name('product.update');
         Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
-
-        Route::any('/search', [ProductController::class, 'search'])->name('product.search');
     });
 
 });

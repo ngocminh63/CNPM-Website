@@ -27,19 +27,6 @@
 
           <div class="col-md-12">
           <a href="{{ route('product.create') }}" class="btn btn-success float-right m-2">ADD</a>
-          <div class="float-right m-2">
-            <form class="form-inline" method="POST" action="{{route('product.search')}}" >
-              {{ csrf_field() }}
-                <input name="keyword" class="form-control" type="search"  placeholder = "Nhập từ khóa cần tìm" aria-label="Search" required>
-                <select name="choose" class="form-control" aria-label="Search">
-                    <option value="code">Mã sản phẩm</option>
-                    <option value="name">Tên sản phẩm</option>
-                    <option value="cate_name">Tên Loại sản phẩm</option>
-                    <option value="state">Tình Trạng</option>
-                </select>
-                <button class="btn btn-secondary" type="submit">Tìm kiếm</button>
-            </form>
-        </div>
         </div>
         <div class="col-md-12">
           <table class="table table-bordered" height="400px">

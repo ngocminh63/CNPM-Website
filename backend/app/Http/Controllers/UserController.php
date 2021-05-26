@@ -40,7 +40,7 @@ class UserController extends Controller
         return view('user.edituser', compact('user'));
     }
     public function update(EditUserRequest $request, $id){
-        $this->user->find($id)->update([
+        User::find($id)->update([
             'fullname' => $request->fullname,
             'email' => $request->email,
             'phone' => $request->phone,
