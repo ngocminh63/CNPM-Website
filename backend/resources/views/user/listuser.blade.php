@@ -15,6 +15,12 @@
 		  <div class="row">
 
 			@if(session('success'))
+         <script language="javascript">
+          confirm("Thao Tác Thành Công");
+          </script>
+        @endif
+
+			@if(session('success'))
           <div class="alert bg-success" role="alert">
             {{session('success')}} 
           </div>

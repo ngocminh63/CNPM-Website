@@ -52,7 +52,7 @@
             
                 <div class="form-group">
                   
-                    <button class="btn btn-success"  type="submit">Thêm thành viên</button>
+                    <button  onclick="return confirm('Bạn có chắc chắn muốn thêm người dùng này?');" class="btn btn-success"  type="submit">Thêm thành viên</button>
                     <a href="{{route('user.index')}}" class="btn btn-danger" type="button">Huỷ bỏ</a>
                 </div>
             </div>

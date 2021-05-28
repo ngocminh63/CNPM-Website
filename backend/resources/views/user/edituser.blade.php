@@ -47,7 +47,7 @@
             
                 <div class="form-group">
                   
-                    <button class="btn btn-success"  type="submit">Xác Nhận</button>
+                    <button onclick="return confirm('Bạn có chắc chắn muốn thay đổi thông tin của người dùng này?');" class="btn btn-success"  type="submit">Xác Nhận</button>
                     <a href="{{route('user.index')}}" class="btn btn-danger" type="button">Huỷ bỏ</a>
                 </div>
             </div>

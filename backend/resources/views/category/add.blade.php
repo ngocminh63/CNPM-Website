@@ -33,7 +33,7 @@
                 </select>
               </div>
               
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button onclick="return confirm('Bạn có chắc chắn muốn thêm danh mục này?');" type="submit" class="btn btn-primary">Submit</button>
               <a href="{{route('cate-index')}}" class="btn btn-danger" type="button">Huỷ bỏ</a>
 
             </form>

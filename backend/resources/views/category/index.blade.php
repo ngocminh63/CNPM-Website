@@ -20,13 +20,19 @@
         <div class="row">
 
           @if(session('success'))
+         <script language="javascript">
+          confirm("Thao Tác Thành Công");
+          </script>
+        @endif
+
+          @if(session('success'))
           <div class="alert bg-success" role="alert">
             {{session('success')}} 
           </div>
         @endif
 
           <div class="col-md-12">
-          {{-- <a href="{{ route('cate-create') }}" class="btn btn-success float-right m-2">ADD</a> --}}
+          <a href="{{ route('cate-create') }}" class="btn btn-success float-right m-2">ADD</a>
         </div>
         <div class="col-md-12" >
           <table class="table table-bordered"  height="400px">
