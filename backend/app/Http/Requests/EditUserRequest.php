@@ -25,7 +25,8 @@ class EditUserRequest extends FormRequest
     {
         return [
             'email' => 'required|email|unique:users,email,'.$this->id,
-            'fullname' => 'required | max: 255'
+            'fullname' => 'required | max: 255',
+            'phone' => 'required | min:10 | max: 11'
         ];
     }
 
@@ -35,7 +36,9 @@ class EditUserRequest extends FormRequest
             'email.email' => 'Không đúng định dạng email',
             'email.unique' => 'Email đã tồn tại',
             'fullname.required' => 'Tên người dùng không được để trống',
-            'fullname.max' => 'Tên người dùng không được quá 255 ký tự'    
+            'fullname.max' => 'Tên người dùng không được quá 255 ký tự',
+            'phone.min' => 'số điện thoại 10 đến 11 số',
+            'phone.max' => 'số điện thoại 10 đến 11 số',  
         ];
     }
 }
