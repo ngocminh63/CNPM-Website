@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label>Giá sản phẩm</label>
-                    <input type="text" name="price" class="form-control" value="{{$product->price}}">
+                    <input type="number" name="price" class="form-control" value="{{$product->price}}">
                     {!! showErrors($errors,'price') !!}
                 </div>
                 <div class="form-group">
