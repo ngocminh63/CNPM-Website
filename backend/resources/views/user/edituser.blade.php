@@ -30,10 +30,11 @@
                 <div class="form-group">
                     <label>Address</label>
                     <input type="text" name="address" class="form-control" value="{{$user->address}}">
-                </div>
+                    {!! showErrors($errors,'address') !!}
+                  </div>
                 <div class="form-group">
                     <label>Phone</label>
-                    <input type="text" name="phone" class="form-control" value="{{$user->phone}}">
+                    <input type="number" name="phone" class="form-control" value="{{$user->phone}}">
                     {!! showErrors($errors,'phone') !!}
                 </div>
               

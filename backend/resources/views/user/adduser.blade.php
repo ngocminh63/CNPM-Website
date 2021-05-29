@@ -35,6 +35,8 @@
                 <div class="form-group">
                     <label>Address</label>
                     <input type="text" name="address" class="form-control">
+                    {!! showErrors($errors,'address') !!}
+
                 </div>
                 <div class="form-group">
                     <label>Phone</label>

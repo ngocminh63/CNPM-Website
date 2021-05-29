@@ -22,7 +22,6 @@
                 <div class="form-group">
                     <label >Chọn Danh Mục</label>
                     <select class="form-control" name="categories_id">
-                      <option>Chọn danh muc sản phẩm</option>
                       {!! $htmlOption !!}
                     </select>
                   </div>
@@ -52,7 +51,8 @@
                     <label>Ảnh sản phẩm</label>
                     <input id="img" type="file" name="image" class="form-control hidden"
                         onchange="changeImg(this)">
-                        
+                     {!! showErrors($errors,'image') !!}
+
                 </div>
               
               <button onclick="return confirm('Bạn có chắc chắn muốn thêm sản phẩm này?');" type="submit" class="btn btn-primary">Submit</button>

@@ -27,7 +27,8 @@ class AddUserRequest extends FormRequest
             'email' => 'required | email | unique:users,email',
             'password' =>'required | min:4',
             'fullname' => 'required | max: 255',
-            'phone' => 'required | min:10 | max: 11'
+            'phone' => 'required | min:10 | max: 11',
+            'address' => 'required'
         ];
     }
 
@@ -40,8 +41,11 @@ class AddUserRequest extends FormRequest
             'password.min' => 'Mật khẩu phải lớn hơn 4 ký tự',
             'fullname.required' => 'Tên người dùng không được để trống',
             'fullname.max' => 'Tên người dùng không được quá 255 ký tự',
+            'phone.required' => 'Số điện thoại không được để trống',
             'phone.min' => 'số điện thoại 10 đến 11 số',
             'phone.max' => 'số điện thoại 10 đến 11 số',
+            'address.required' => 'Địa chỉ không được để trống'
+
         ];
     }
 }
