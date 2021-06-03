@@ -47,9 +47,7 @@ class ProductController extends Controller
             $file = $request->image;
             $file_name = Str::slug($request->name).'.'.$file->getClientOriginalExtension();
             $path = public_path().'/uploads';
-            // Upload ảnh lên server
             $file->move($path, $file_name);
-            // Lưu tên ảnh vào CSDL
             $product->image = $file_name;
         }
         $product->save();
@@ -75,13 +73,9 @@ class ProductController extends Controller
             $file = $request->image;
             $file_name = Str::slug($request->name).'.'.$file->getClientOriginalExtension();
             $path = public_path().'/uploads';
-            // Upload ảnh lên server
             $file->move($path, $file_name);
-            // Xóa ảnh cũ
             unlink($path.'/'.$product->image);
-            // Lưu tên ảnh vào CSDL
             $product->image = $file_name;
-            // Khi thay đổi ảnh, thì phải xóa ảnh cũ trong thư mục uploads
         }else{
             $product->image = $product->image;
         }
