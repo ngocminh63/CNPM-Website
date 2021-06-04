@@ -7,48 +7,67 @@
 
 </head>
 <body>
-    
+
     <div class="container">
-        <nav class="navbar">       
-                <img class="logo" src="logo.png">
-                <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Giỏ hàng</a></li>
-                    <li><a class="active" href="signup.html">Đăng ký</a></li>
-                    <li><a href="login.html">Đăng nhập</a></li>
-                </ul>
-        </nav>
-    </div>
-    
-        <div class="pagecontainer">
-            <form action="action_page.php" style="border:5px solid #ccc">
-                <div class="container">
-                    <h1>Đăng ký tài khoản</h1>
-                    <p>Hãy hoàn tất thông tin trong ô trống để đăng ký tài khoản.</p>
-                    <hr>
+        <div id="nav-placeholder">
 
-                    <label for="Email"><b>Email</b></label>
-                    <input type="Email" placeholder="Điền email" name="Email" required>
-
-                    <label for="password"><b>Mật khẩu</b></label>
-                    <input type="password" placeholder="Điền mật khẩu" name="password" required>
-
-                    <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-                    <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
-
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ mật khẩu
-                    </label>
-
-                    <p>Tạo tài khoản bạn đồng nghĩa với việc bạn đồng ý với <a href="#" style="color:dodgerblue">Điều khoản và luật pháp</a>.</p>
-
-                    <div class="clearfix">
-                        <button type="button" class="cancelbtn">Hủy bỏ</button>
-                        <button type="submit" name="sbm" class="signupbtn">Đăng ký</button>
-                    </div>
-                </div>
-            </form>
         </div>
+    </div>
+
+    <div class="pagecontainer">
+        <form action="action_page.php" style="border:5px solid #ccc">
+            <div class="container">
+                <h1>Đăng ký tài khoản</h1>
+                <p>Hãy hoàn tất thông tin trong ô trống để đăng ký tài khoản.</p>
+                <hr>
+
+                <label for="name"><b>Họ tên</b></label>
+                <input type="name" placeholder="Điền Họ Tên của bạn" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Điền Email" name="email" required>
+
+                <label for="password"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Điền mật khẩu" name="password" required>
+
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+
+                <div class="genderbox">
+                    <label for="gender"><b>Giới tính</b></label><br />
+                    <label for="gender">Nam</label>
+                    <input type="radio" name="gender" required>
+
+                    <label for="gender">Nữ</label>
+                    <input type="radio" name="gender" required>
+                </div>
+
+                <label for="birthday"><b>Ngày sinh</b></label>
+                <input type="date" id="birthday" name="birthday" required>
+
+                <label for="adress"><b>Địa chỉ</b></label>
+                <input type="adress" placeholder="Nhập địa chỉ" name="adress" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ mật khẩu
+                </label>
+
+                <p>Tạo tài khoản bạn đồng nghĩa với việc bạn đồng ý với <a href="#" style="color:dodgerblue">Điều khoản và luật pháp</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Hủy bỏ</button>
+                    <button type="submit" name="sbm" class="signupbtn">Đăng ký</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
 </body>
 </html>
