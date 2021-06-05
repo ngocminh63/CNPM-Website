@@ -11,7 +11,10 @@
             <nav class="navbar">
                 <img class="logo" src="{{asset('logo.png')}}">
                 <ul>
-                    <li><a href="{{route('home')}}">Đăng nhập</a></li>
+                    <li><a href="{{route('sanpham.index')}}">Trang chủ</a></li>
+                    <li><a href="{{route('home')}}">Đăng nhập Trang Quản lý</a></li>
+                    <li><a href="{{route('dangnhap')}}">Đăng nhập Khách Hàng</a></li>
+                    <li><a href="{{route('dangky')}}">Đăng Ký Khách Hàng</a></li>
                 </ul>
             </nav>
             <div class="center">
