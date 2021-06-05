@@ -4,23 +4,30 @@
     margin: 0;
     font-family: Roboto !important;
 }
-
+h1.style{
+    color: white
+}
 a:active{
     color: gray;
 }
 
 body {
-    padding-top: 60px;
+
     background-color:#242f5b;
 }
 
 .wrapper {
-    background: url(Gammingsetup.jpg) no-repeat;
+    background: url(img/Gammingsetup.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-.navbar {
+.wrapper2 {
+    height: 130px;
+}
+
+    /*.navbar {
+    overflow: hidden;
     position: fixed;
     height: 80px;
     width: 100%;
@@ -29,6 +36,16 @@ body {
     background: #181F3C;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.navbar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
 .navbar .logo{
 	width: 140px;
 	height: auto;
@@ -57,6 +74,7 @@ body {
 	background: red;
 	border-radius: 2px;
 }
+    */
 .wrapper .center{
 	position: absolute;
 	left: 50%;
@@ -120,13 +138,24 @@ form {
 }
 
 /* Full-width inputs */
-input[type=Email], input[type=password] {
+input[type=Email], select, input[type=password], input[type=name], input[type=adress], input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+/*checkbox*/
+input[type=radio] {
+    padding: 12px, 20px;
+    margin: 8px;
+    display: inline-block;
+}
+
+.genderbox {
+    width: 100%;
 }
 
 /* Set a style for all buttons */
@@ -218,7 +247,509 @@ hr {
     margin-bottom: 25px;
 }
 
-input[type=Email]:focus, input[type=password]:focus {
+input[type=Email]:focus, input[type=password]:focus, input[type=name]:focus input[type=adress]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+/*slideshow*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*productcard*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+    .card button:hover {
+        opacity: 0.7;
+    }
+
+    /*divider*/
+.top-buffer {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+/* CSS Document */
+h3.h3 {
+    text-align: center;
+    margin: 1em;
+    text-transform: capitalize;
+    font-size: 1.7em;
+}
+
+.product-grid {
+    font-family: Raleway,sans-serfi;
+    text-align: center;
+    padding: 0 0 72px;
+    border: 1px solid rgba(0,0,0,.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+    .product-grid .product-image {
+        position: relative;
+        transition: all .3s ease 0s
+    }
+
+        .product-grid .product-image a {
+            display: block;
+        }
+
+        .product-grid .product-image img {
+            width: 100%;
+            height: auto;
+        }
+
+    .product-grid .pic-1 {
+        opacity: 1;
+        transition: all .3s ease-out 0s;
+    }
+
+    .product-grid:hover .pic-1 {
+        opacity: 0;
+    }
+
+    .product-grid .pic-2 {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s ease-out 0s;
+    }
+
+    .product-grid:hover .pic-2 {
+        opacity: 1
+    }
+
+    .product-grid .social {
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        opacity: 0;
+        transform: translateY(-50%) translateX(-50%);
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        z-index: 1;
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid:hover .social {
+        opacity: 1;
+        top: 50%
+    }
+
+    .product-grid .social li {
+        display: inline-block
+    }
+
+        .product-grid .social li a {
+            color: #fff;
+            background-color: #333;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            height: 40px;
+            width: 40px;
+            margin: 0 2px;
+            display: block;
+            position: relative;
+            transition: .3s ease-in-out;
+        }
+
+            .product-grid .social li a:hover {
+                color: #fff;
+                background-color: #ef5777;
+            }
+
+            .product-grid .social li a:after, .product-grid .social li a:before {
+                content: attr(data-tip);
+                color: #fff;
+                background-color: #000;
+                font-size: 12px;
+                letter-spacing: 1px;
+                line-height: 20px;
+                padding: 1px 5px;
+                white-space: nowrap;
+                opacity: 0;
+                transform: translateX(-50%);
+                position: absolute;
+                left: 50%;
+                top: -30%;
+            }
+
+            .product-grid .social li a:after {
+                content: '';
+                height: 15px;
+                width: 15px;
+                border-radius: 0;
+                transform: translateX(-50%) rotate(45deg);
+                top: -20px;
+                z-index: -1
+            }
+
+            .product-grid .social li a:hover:after, .product-grid .social li a:hover:before {
+                opacity: 1
+            }
+
+    .product-grid .product-discount-label, .product-grid .product-new-label {
+        color: #fff;
+        background-color: #ef5777;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 0
+    }
+
+    .product-grid .product-discount-label {
+        background-color: #333;
+        left: auto;
+        right: 0
+    }
+
+    .product-grid .rating {
+        color: #FFD200;
+        font-size: 12px;
+        padding: 12px 0 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        z-index: -1
+    }
+
+        .product-grid .rating li.disable {
+            color: rgba(0,0,0,.2)
+        }
+
+    .product-grid .product-content {
+        background-color: #fff;
+        text-align: center;
+        padding: 12px 0;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -27px;
+        z-index: 1;
+        transition: all .3s
+    }
+
+    .product-grid:hover .product-content {
+        bottom: 0
+    }
+
+    .product-grid .title {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .5px;
+        text-transform: capitalize;
+        margin: 0 0 10px;
+        transition: all .3s ease 0s
+    }
+
+        .product-grid .title a {
+            color: #828282
+        }
+
+            .product-grid .title a:hover, .product-grid:hover .title a {
+                color: #ef5777
+            }
+
+    .product-grid .price {
+        color: #333;
+        font-size: 17px;
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        letter-spacing: .6px;
+        margin-bottom: 8px;
+        text-align: center;
+        transition: all .3s
+    }
+
+
+        .product-grid .price span {
+            color: #999;
+            font-size: 13px;
+            font-weight: 400;
+            text-decoration: line-through;
+            margin-left: 3px;
+            display: inline-block
+        }
+
+
+    .product-grid .add-to-cart {
+        color: #000;
+        font-size: 13px;
+        font-weight: 600
+    }
+
+@media only screen and (max-width:990px) {
+    .product-grid {
+        margin-bottom: 30px
+    }
+}
+
+
+nav {
+    background: #037729;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 100px;
+    background: #181F3C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    /* Styling the logo */
+    nav .logo {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -1px;
+    }
+
+    /* Styling all the nav items as a whole */
+    nav .nav-items {
+       
+        display: flex;
+        flex: 1;
+        padding: 0 0 0 200px;
+    }
+
+        /* Styling the list items in the nav tag */
+        nav .nav-items li {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+            /* Styling each list items */
+            nav .nav-items li a {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+
+                /* Setting the hover colour on the list items*/
+
+                nav .nav-items li a:hover {
+                    border-radius: 2px;
+                    color: red;
+                }
+
+    nav .searchbar {
+        position: relative;
+    }
+  
+  
+        /* Styling the search box where the 
+            input would be given */
+        nav .searchbar input[type="text"] {
+            border: 0;
+            padding: 0;
+            width: 0px;
+            height: 35px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+  
+        /* Styling the search bar icon */
+        nav .searchbar .icon {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 35px;
+            height: 100%;
+            background: none;
+            border-radius: 3px;
+            color: #fff;
+            transition: all 0.5s 0.3s ease;
+        }
+          
+        nav .searchbar .icon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+          
+        nav .searchbar .icon.active {
+            background: darkred;
+            transition: all 0.3s ease;
+        }
+          
+        nav .searchbar input[type="text"].active {
+            width: 250px;
+            padding: 0 10px;
+            transition: all 0.5s 0.2s ease;
+        }
+          
+        nav .licon li {
+            list-style: none;
+            display: flex;
+        }
+          
+        nav .licon li a {
+            padding: 0 20px;
+        }
+      
+
+
+
+
+
+
+
