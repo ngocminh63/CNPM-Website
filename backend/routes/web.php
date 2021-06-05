@@ -11,8 +11,6 @@ use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Site\Cart\CartController;
 use App\Http\Controllers\Site\Products\SiteProductController;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*

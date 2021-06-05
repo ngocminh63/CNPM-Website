@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers\Site\Products;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\Category;
+
+use App\Http\Controllers\Controller;
+use PhpParser\Node\Expr\Print_;
+
+
 class SiteProductController extends Controller
 {
+
     public function index(){
-        return view('Frontend.product');
+        $products = Product::all();
+        return view('Frontend.product', compact('products'));
     }
+
 }
