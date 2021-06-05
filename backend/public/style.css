@@ -12,7 +12,7 @@ a:active{
 }
 
 body {
-    padding-top: 60px;
+
     background-color:#242f5b;
 }
 
@@ -22,7 +22,12 @@ body {
     height: 100vh;
 }
 
-.navbar {
+.wrapper2 {
+    height: 130px;
+}
+
+    /*.navbar {
+    overflow: hidden;
     position: fixed;
     height: 80px;
     width: 100%;
@@ -31,6 +36,16 @@ body {
     background: #181F3C;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.navbar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
 .navbar .logo{
 	width: 140px;
 	height: auto;
@@ -59,6 +74,7 @@ body {
 	background: red;
 	border-radius: 2px;
 }
+    */
 .wrapper .center{
 	position: absolute;
 	left: 50%;
@@ -622,6 +638,114 @@ h3.h3 {
     }
 }
 
+
+nav {
+    background: #037729;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 100px;
+    background: #181F3C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    /* Styling the logo */
+    nav .logo {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -1px;
+    }
+
+    /* Styling all the nav items as a whole */
+    nav .nav-items {
+       
+        display: flex;
+        flex: 1;
+        padding: 0 0 0 200px;
+    }
+
+        /* Styling the list items in the nav tag */
+        nav .nav-items li {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+            /* Styling each list items */
+            nav .nav-items li a {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+
+                /* Setting the hover colour on the list items*/
+
+                nav .nav-items li a:hover {
+                    border-radius: 2px;
+                    color: red;
+                }
+
+    nav .searchbar {
+        position: relative;
+    }
+  
+  
+        /* Styling the search box where the 
+            input would be given */
+        nav .searchbar input[type="text"] {
+            border: 0;
+            padding: 0;
+            width: 0px;
+            height: 35px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+  
+        /* Styling the search bar icon */
+        nav .searchbar .icon {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 35px;
+            height: 100%;
+            background: none;
+            border-radius: 3px;
+            color: #fff;
+            transition: all 0.5s 0.3s ease;
+        }
+          
+        nav .searchbar .icon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+          
+        nav .searchbar .icon.active {
+            background: darkred;
+            transition: all 0.3s ease;
+        }
+          
+        nav .searchbar input[type="text"].active {
+            width: 250px;
+            padding: 0 10px;
+            transition: all 0.5s 0.2s ease;
+        }
+          
+        nav .licon li {
+            list-style: none;
+            display: flex;
+        }
+          
+        nav .licon li a {
+            padding: 0 20px;
+        }
+      
 
 
 
