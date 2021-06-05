@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 25, 2021 lúc 05:50 AM
+-- Thời gian đã tạo: Th6 05, 2021 lúc 10:09 AM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.3.6
 
@@ -42,16 +42,16 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `cate_name`, `parent_id`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Điện Thoại', 0, 'dien-thoai', '2021-05-18 20:07:52', '2021-05-18 20:07:52'),
-(2, 'LapTop', 0, 'laptop', '2021-05-18 20:08:02', '2021-05-18 20:08:02'),
-(3, 'Phụ Kiện', 0, 'phu-kien', '2021-05-18 20:08:15', '2021-05-18 20:08:15'),
-(4, 'Iphone', 1, 'iphone', '2021-05-18 20:08:28', '2021-05-18 20:08:28'),
-(5, 'OPPO', 1, 'oppo', '2021-05-18 20:08:43', '2021-05-18 20:08:43'),
-(6, 'Iphone 83', 4, 'iphone-83', '2021-05-18 20:08:57', '2021-05-24 08:04:21'),
-(7, 'ASUS', 2, 'asus', '2021-05-18 20:09:17', '2021-05-18 20:09:17'),
-(8, 'Iphone 8 Plus', 4, 'iphone-8-plus', '2021-05-18 20:09:37', '2021-05-18 20:09:37'),
-(9, 'Acer 3', 2, 'acer-3', '2021-05-18 20:09:54', '2021-05-24 08:01:39'),
-(10, 'Acer 33', 2, 'acer-33', '2021-05-24 08:02:05', '2021-05-24 08:02:05');
+(1, 'Điện Thoại', 0, 'dien-thoai', '2021-05-18 13:07:52', '2021-05-18 13:07:52'),
+(2, 'LapTop', 0, 'laptop', '2021-05-18 13:08:02', '2021-05-18 13:08:02'),
+(3, 'Phụ Kiện', 0, 'phu-kien', '2021-05-18 13:08:15', '2021-05-18 13:08:15'),
+(4, 'Iphone', 1, 'iphone', '2021-05-18 13:08:28', '2021-05-18 13:08:28'),
+(5, 'OPPO', 1, 'oppo', '2021-05-18 13:08:43', '2021-05-18 13:08:43'),
+(6, 'Iphone 83', 4, 'iphone-83', '2021-05-18 13:08:57', '2021-05-24 01:04:21'),
+(7, 'ASUS', 2, 'asus', '2021-05-18 13:09:17', '2021-05-18 13:09:17'),
+(8, 'Iphone 8 Plus', 4, 'iphone-8-plus', '2021-05-18 13:09:37', '2021-05-18 13:09:37'),
+(9, 'Acer 3', 2, 'acer-3', '2021-05-18 13:09:54', '2021-05-24 01:01:39'),
+(10, 'Acer 33', 2, 'acer-33', '2021-05-24 01:02:05', '2021-05-24 01:02:05');
 
 -- --------------------------------------------------------
 
@@ -76,13 +76,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `fullname`, `email`, `phone`, `password`, `gender`, `address`, `created_at`, `updated_at`) VALUES
-(1, 'Nguyễn Covid', 'kh01@gmail.com', '0222333666', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 1, 'Hà Nội', NULL, NULL),
-(2, 'Nguyễn Khoảng Cách', 'kh02@gmail.com', '0222333777', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 2, 'Hà Tây', NULL, NULL),
-(3, 'Nguyễn Khẩu Trang', 'kh03@gmail.com', '0222333888', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 1, 'Hà Đông', NULL, NULL),
-(4, 'Nguyễn Khai Báo', 'kh05@gmail.com', '0222333111', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 1, 'Hà Đông', NULL, NULL),
-(5, 'Nguyễn Khử Khuẩn', 'kh06@gmail.com', '0222333222', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 1, 'Hà Nam', NULL, NULL),
-(6, 'Nguyễn Không Tụ Tập', 'kh07@gmail.com', '0222333444', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 2, 'Hà Bắc', NULL, NULL),
-(7, 'Mai Âm Nhạc', 'kh08@gmail.com', '0222333555', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 2, 'Hà Tĩnh', NULL, NULL);
+(1, 'đào văn hải', 'ad@gmail.com', '0979133267', '098f6bcd4621d373cade4e832627b4f6', 2, 'số nhà 17 ngõ 15', '2021-06-04 09:37:56', '2021-06-04 09:37:56'),
+(2, 'đào văn hải', 'admin@gmail.com', '0979133267', '098f6bcd4621d373cade4e832627b4f6', 2, 'số nhà 17 ngõ 15', '2021-06-04 09:38:29', '2021-06-04 09:38:29');
 
 -- --------------------------------------------------------
 
@@ -117,16 +112,16 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(137, '2014_10_12_000000_create_users_table', 1),
-(138, '2014_10_12_100000_create_password_resets_table', 1),
-(139, '2019_08_19_000000_create_failed_jobs_table', 1),
-(140, '2021_05_11_134531_add_column_deleted_at_table_users', 1),
-(141, '2021_05_14_055309_create_categories_table', 1),
-(142, '2021_05_15_153040_create_products_table', 1),
-(143, '2021_05_18_130547_create_customers_table', 1),
-(144, '2021_05_21_020453_create_ships_table', 1),
-(145, '2021_05_22_060205_create_orders_table', 1),
-(146, '2021_05_22_060310_create_order_details_table', 1);
+(218, '2014_10_12_000000_create_users_table', 1),
+(219, '2014_10_12_100000_create_password_resets_table', 1),
+(220, '2019_08_19_000000_create_failed_jobs_table', 1),
+(221, '2021_05_11_134531_add_column_deleted_at_table_users', 1),
+(222, '2021_05_14_055309_create_categories_table', 1),
+(223, '2021_05_15_153040_create_products_table', 1),
+(224, '2021_05_21_020453_create_ships_table', 1),
+(225, '2021_06_04_154855_create_customers_table', 1),
+(226, '2021_06_04_155338_create_orders_table', 1),
+(227, '2021_06_04_155614_create_order_details_table', 1);
 
 -- --------------------------------------------------------
 
@@ -147,22 +142,6 @@ CREATE TABLE `orders` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `orders`
---
-
-INSERT INTO `orders` (`id`, `MaHoaDon`, `customers_id`, `ships_id`, `TenNguoiNhan`, `DiaChiNhan`, `DienThoai`, `TrangThai`, `created_at`, `updated_at`) VALUES
-(1, 'HD06', 3, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 1, '2021-05-23 06:56:04', '2020-05-24 08:10:42'),
-(2, 'HD01', 2, 3, 'Dao Hai', 'thanh trì hà nội', '123456854', 1, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
-(3, 'HD02', 2, 2, 'Dao Hai', 'thanh trì nghệ an', '123456854', 1, '2021-05-18 20:11:19', '2021-05-22 17:00:00'),
-(4, 'HD03', 2, 1, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-23 06:56:04'),
-(5, 'HD04', 4, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-23 06:56:32'),
-(6, 'HD05', 2, 4, 'Dao Hai', 'thanh trì hà nội', '123456854', 2, '2021-05-18 20:11:19', '2021-05-24 08:10:55'),
-(7, 'HD07', 4, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 0, '2021-05-23 06:56:04', NULL),
-(8, 'HD08', 5, 2, 'Dao Hai', 'thanh trì hà nội', '123456854', 0, '2021-05-23 06:56:04', NULL),
-(9, 'HD09', 2, 3, 'Dao Hai', 'thanh trì nghệ an', '123456854', 2, '2021-05-23 06:56:04', '2021-05-24 16:54:27'),
-(10, 'HD010', 2, 4, 'Dao Hai', 'thanh trì thanh hóa', '123456854', 1, '2021-05-23 06:56:04', '2021-05-24 16:54:52');
-
 -- --------------------------------------------------------
 
 --
@@ -177,17 +156,6 @@ CREATE TABLE `order_details` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `order_details`
---
-
-INSERT INTO `order_details` (`id`, `quantity`, `products_id`, `orders_id`, `created_at`, `updated_at`) VALUES
-(1, 2, 2, 3, NULL, NULL),
-(2, 3, 3, 2, NULL, NULL),
-(3, 3, 4, 2, NULL, NULL),
-(4, 1, 1, 4, NULL, NULL),
-(5, 3, 3, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -225,10 +193,26 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `code`, `slug`, `image`, `price`, `state`, `categories_id`, `created_at`, `updated_at`) VALUES
-(1, 'iphonn 8 plus like new', 'sp01', 'iphonn-8-plus-like-new', 'iphonn-8-plus-like-new.PNG', '1500000.00', 1, 6, '2021-05-18 20:11:19', '2021-05-18 20:16:32'),
-(2, 'iphone 8 new', 'sp02', 'iphone-8-new', 'iphone-8-new.jpg', '2500000.00', 1, 4, '2021-05-18 20:15:18', '2021-05-18 20:15:18'),
-(3, 'Acer gaming', 'sp03', 'acer-gaming', 'acer-gaming.jpg', '1500000.00', 0, 9, '2021-05-18 20:16:01', '2021-05-18 20:16:01'),
-(4, 'tai nghe sony', 'sp04', 'tai-nghe-sony', 'tai-nghe-sony.jpg', '1500000.00', 0, 3, '2021-05-18 20:17:14', '2021-05-18 20:17:14');
+(6, 'sản phẩm 01', 'sp01', 'san-pham-01', 'san-pham-01.jpg', '1500000.00', 1, 1, '2021-06-04 11:04:32', '2021-06-04 11:04:32'),
+(7, 'sản phẩm 02', 'sp02', 'san-pham-02', 'san-pham-02.jpg', '2500000.00', 1, 1, '2021-06-04 11:04:56', '2021-06-04 11:04:56'),
+(8, 'sản phẩm 03', 'sp03', 'san-pham-03', 'san-pham-03.jpg', '1500000.00', 1, 1, '2021-06-04 11:05:19', '2021-06-04 11:05:19'),
+(9, 'sản phẩm 04', 'sp04', 'san-pham-04', 'san-pham-04.jpg', '2500000.00', 1, 1, '2021-06-04 11:05:44', '2021-06-04 11:05:44'),
+(10, 'sản phẩm 05', 'sp05', 'san-pham-05', 'san-pham-05.jpg', '2500000.00', 1, 1, '2021-06-04 11:06:10', '2021-06-04 11:06:10'),
+(11, 'sản phẩm 06', 'sp06', 'san-pham-06', 'san-pham-06.jpg', '1500000.00', 1, 1, '2021-06-04 11:06:33', '2021-06-04 11:06:33'),
+(12, 'sản phẩm 07', 'sp07', 'san-pham-07', 'san-pham-07.jpg', '1500000.00', 1, 1, '2021-06-04 11:06:55', '2021-06-04 11:06:55'),
+(13, 'sản phẩm 08', 'sp08', 'san-pham-08', 'san-pham-08.jpg', '2500000.00', 1, 1, '2021-06-04 11:07:19', '2021-06-04 11:07:19'),
+(14, 'sản phẩm 09', 'sp09', 'san-pham-09', 'san-pham-09.jpg', '2500000.00', 1, 1, '2021-06-04 11:07:42', '2021-06-04 11:07:42');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `product_user`
+--
+
+CREATE TABLE `product_user` (
+  `id_user` bigint(20) NOT NULL,
+  `id_product` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -281,11 +265,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fullname`, `password`, `address`, `email`, `phone`, `level`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'admin', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ha noi', 'admin@gmail.com', '0222555444', 2, NULL, NULL, NULL),
-(2, 'đào văn hải', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'số nhà 17 ngõ 15', 'daovhai0110@gmail.com', '0979133267', 2, '2021-05-18 20:19:02', '2021-05-22 01:43:34', '2021-05-22 01:43:34'),
-(3, 'nhân viên 01', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv01@gmail.com', '0979133267', 1, '2021-05-18 20:19:41', '2021-05-22 01:44:33', '2021-05-22 01:44:33'),
-(4, 'nhân viên 02', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv02@gmail.com', '0979133267', 1, '2021-05-18 20:20:12', '2021-05-18 20:20:39', '2021-05-18 20:20:39'),
-(5, 'nhân viên 03', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv03@gmail.com', '0979133267', 1, '2021-05-18 20:21:23', '2021-05-22 01:43:43', '2021-05-22 01:43:43'),
-(6, 'nhân viên 04', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ha tinh', 'nv04@gmail.com', '0979133225', 1, '2021-05-18 20:21:48', '2021-05-22 01:43:30', '2021-05-22 01:43:30');
+(2, 'đào văn hải', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'số nhà 17 ngõ 15', 'daovhai0110@gmail.com', '0979133267', 2, '2021-05-18 13:19:02', '2021-05-21 18:43:34', '2021-05-21 18:43:34'),
+(3, 'nhân viên 01', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv01@gmail.com', '0979133267', 1, '2021-05-18 13:19:41', '2021-05-21 18:44:33', '2021-05-21 18:44:33'),
+(4, 'nhân viên 02', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv02@gmail.com', '0979133267', 1, '2021-05-18 13:20:12', '2021-05-18 13:20:39', '2021-05-18 13:20:39'),
+(5, 'nhân viên 03', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ho chi minh', 'nv03@gmail.com', '0979133267', 1, '2021-05-18 13:21:23', '2021-05-21 18:43:43', '2021-05-21 18:43:43'),
+(6, 'nhân viên 04', '$2y$10$ooPG9s1lcwUGYv1nqeyNcO0ccYJf8hlhm5dJXy7xoamvgiczXHB7S', 'ha tinh', 'nv04@gmail.com', '0979133225', 1, '2021-05-18 13:21:48', '2021-05-21 18:43:30', '2021-05-21 18:43:30');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -347,6 +331,13 @@ ALTER TABLE `products`
   ADD KEY `products_categories_id_foreign` (`categories_id`);
 
 --
+-- Chỉ mục cho bảng `product_user`
+--
+ALTER TABLE `product_user`
+  ADD UNIQUE KEY `id_user` (`id_user`),
+  ADD UNIQUE KEY `id_product` (`id_product`);
+
+--
 -- Chỉ mục cho bảng `ships`
 --
 ALTER TABLE `ships`
@@ -372,7 +363,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -384,25 +375,25 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=228;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `ships`
