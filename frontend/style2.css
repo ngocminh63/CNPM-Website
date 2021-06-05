@@ -25,16 +25,24 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
     width: 10%;
 }
 
-.product-removal {
+.product-state {
     float: left;
     width: 9%;
+}
+.product-removal {
+    width: 100%;
+}
+
+.product-update {
+    width: 100%;
 }
 
 .product-line-price {
     float: left;
-    width: 12%;
+    width: 11%;
     text-align: right;
 }
+
 
 /* This is used as the traditional .clearfix class */
 .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
@@ -82,7 +90,7 @@ label {
     border-bottom: 1px solid #eee;
 }
 
-.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal .product-update {
     text-indent: -9999px;
 }
 
@@ -128,6 +136,37 @@ label {
         .product .remove-product:hover {
             background-color: #a44;
         }
+
+    .product .update-product {
+        border: 0;
+        padding: 4px 8px;
+        background-color: green;
+        color: #fff;
+        font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+        .product .update-product:hover {
+            background-color: #a44;
+        }
+
+#buttonwrap {
+    display:block;
+    
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#update {
+    width: 100%;
+   /* add this */
+    float:left;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+#remove {
+    width: 100%;
+    float: left;
+}
+
 
 /* Totals section */
 .totals .totals-item {
@@ -217,6 +256,9 @@ label {
         width: auto;
     }
 
+    .product-update {
+        width: auto;
+    }
     .product-line-price {
         float: right;
         width: 70px;

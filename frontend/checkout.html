@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang thanh toán</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="wrapper2">
+        <div id="nav-placeholder">
+
+        </div>
+    </div>
+    <div class="pagecontainer">
+        <div class="container">       
+                <div class="row">
+                    <div class="col-12 col">
+                        <div class="info-bar">
+                            <p>
+                                <i class="bi bi-info-circle"></i>
+                                Trở lại mua hàng ? <a href="login.html">Bấm vào đây để đăng nhập</a>
+                            </p>
+                        </div>
+                        <p>
+                            Nếu bạn đã mua hàng rồi, Hãy hoàn thiện thông tin trong các ô trống. Nếu như bạn là khách hàng mới hãy tiếp tục điền phần thanh toán &amp; Giao hàng.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col">
+                        <form method="get" class="user-pswd">
+                            <div class="width50 padright">
+                                <label for="username">Tên người dùng</label>
+                                <input type="text" name="username" id="username" required>
+                            </div>
+                            <div class="width50">
+                                <label for="password">Mật khẩu</label>
+                                <input type="password" name="password" id="password" required>
+                            </div>
+                            <input type="submit" name="submit" value="Đăng nhập"><input type="checkbox" value="1" name="checkbox"><p>Nhớ mật khẩu</p>
+                        </form>
+                        <p><a href="#">Quên mật khẩu</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col">
+                        <div class="info-bar">
+                            <p>
+                                <i class="bi bi-info-circle"></i>
+                                Nhập mã giảm giá.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col coupon">
+                        <form method="get">
+                            <input type="text" name="coupon" id="coupon" placeholder="Mã giảm giá">
+                            <input type="submit" name="submit" value="Sử dụng mã giảm giá">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <form method="get">
+                        <div class="col-7 col">
+                            <h3 class="topborder"><span>Chi tiết hóa đơn</span></h3>
+                            <label for="country">Quốc gia</label>
+                            <select name="country" id="country" required>
+                                <option value="">Hãy chọn một quốc gia</option>
+                                <option value="1a">Việt Nam</option>
+                                <option value="2a">Không phải Việt Nam</option>
+                            </select>
+                            <div class="width50 padright">
+                                <label for="fname">Họ và đệm</label>
+                                <input type="text" name="fname" id="fname" required>
+                            </div>
+                            <div class="width50">
+                                <label for="lname">Tên</label>
+                                <input type="text" name="lname" id="lname" required>
+                            </div>
+                            <label for="company">Tên công ty</label>
+                            <input type="text" name="company" id="company" required>
+                            <label for="address">Địa chỉ</label>
+                            <input type="text" name="address" id="address" required>
+                            <input type="text" name="address" id="address2" placeholder="Địa chỉ 2">
+                            <label for="city">Tỉnh/Thành phố</label>
+                            <input type="text" name="city" id="city" required>
+                            <div class="width50 padright">
+                                <label for="province">Tỉnh thành</label>
+                                <select name="province" id="province" required>
+                                    <option value="">Hãy lựa chọn tỉnh thành phố</option>
+                                    <option value="ab">Hà Nội</option>
+                                    <option value="bc">Thành phố H.C.M</option>
+                                    <option value="cd">Sài Gòn</option>
+
+                                </select>
+                            </div>
+                            </div>
+                            
+                            <div class="width50 padright">
+                                <label for="postcode">Mã bưu chính</label>
+                                <input type="text" name="postcode" id="postcode" placeholder="Mã bưu chính" required>
+                            </div>
+                            <div class="width50">
+                                <label for="email">Địa chỉ email</label>
+                                <input type="text" name="email" id="email" required>
+                            </div>
+                            <div class="width50 padright">
+                                <label for="tel">Số điện thoại</label>
+                                <input type="text" name="tel" id="tel" required>
+                            </div>
+
+                            <div class="width50 ">
+                                <label for="notes" class="notes">Chú thích giao hàng</label>
+                                <textarea name="notes" id="notes" placeholder="Thêm yêu cầu về giờ giao hàng"></textarea>
+                            </div>
+
+                            <div class="col-5 col order">
+                                <h3 class="topborder"><span>Yêu cầu của bạn</span></h3>
+                                <div class="row">
+                                    <h4 class="inline">Sản phẩm</h4>
+                                    <h4 class="inline alignright">Tổng tiền</h4>
+                                </div>
+                                <div>
+                                    <p class="prod-description inline">
+                                        Đồ điện tử<div class="qty inline"><span class="smalltxt">x</span> 1</div>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h5 class="inline difwidth">Giao hàng</h5>
+                                    <p class="inline alignright center">Miễn phí giao hàng</p>
+                                </div>
+                                <div><h5>Giá tổng tiền</h5></div>
+                                <div>
+                                    <h3 class="topborder"><span>Phương thức trả tiền</span></h3>
+                                    <input type="radio" value="banktransfer" name="payment" checked><p>Chuyển qua ngân hàng</p>
+
+                                </div>
+                                <div><input type="radio" value="cheque" name="payment"><p>Chuyển tiền qua ví Momo</p></div>
+                                <div>
+                                    <input type="radio" value="paypal" name="payment"><p>Chuyển tiền qua Paypal</p>
+                                    <fieldset class="paymenttypes">
+                                        <legend><img alt="PayPal Logo" class="paypal"></legend>
+                                        <img alt="Visa, Mastercard, Maestro và Amex Credit Cards" class="cards">
+                                    </fieldset>
+                                </div>
+                                <input type="submit" name="submit" value="Đặt hàng" class="redbutton">
+                            </div>
+</form>
+                </div>
+            </div>
+        </div>
+    
+    <!-- partial -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+</body>
+</html>
