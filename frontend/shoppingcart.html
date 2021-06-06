@@ -8,16 +8,16 @@
 
 </head>
 <body>
-	<div class="wrapper2">
-		<div id="nav-placeholder">
+    <div class="wrapper2">
+        <div id="nav-placeholder">
 
-		</div>
-	</div>
-	<!-- partial:index.partial.html -->
-	<div class="pagecontainer">
-		<form action="action_page.php" style="border:5px solid #ccc">
-			<div class="container">
-				<h1>Giỏ hàng</h1>
+        </div>
+    </div>
+    <!-- partial:index.partial.html -->
+    <div class="pagecontainer">
+        <form style="border:5px solid #ccc">
+            <div class="container">
+                <h1>Giỏ hàng</h1>
                 <div class="shopping-cart">
                     <div class="column-labels">
                         <label class="product-image">Hình ảnh</label>
@@ -27,7 +27,7 @@
                         <label class="product-state">Xóa bỏ</label>
                         <label class="product-line-price">Giá tiền</label>
                     </div>
-                    <div class="product">
+                    <div id="product1" class="product">
                         <div class="product-image">
                             <img src="img/pro3.jpg">
                         </div>
@@ -41,9 +41,9 @@
                         </div>
                         <div id="buttonwrap" class="product-state">
                             <div class="product-removal">
-                                <a id="remove" class="remove-product">
+                                <button id="remove" class="remove-product">
                                     Xóa bỏ
-                                </a>
+                                </button>
                             </div>
                             <div class="product-update">
                                 <a id="update" class="update-product" href="#"> Cập nhật </a>
@@ -55,7 +55,7 @@
                     </div>
 
 
-                    <div class="product">
+                    <div id="product1" class="product">
                         <div class="product-image">
                             <img src="img/pro14.jpg">
                         </div>
@@ -69,9 +69,9 @@
                         </div>
                         <div id="buttonwrap" class="product-state">
                             <div class="product-removal">
-                                <a id="remove" class="remove-product">
+                                <button id="remove" class="remove-product">
                                     Xóa bỏ
-                                </a>
+                                </button>
                             </div>
                             <div class="product-update">
                                 <a id="update" class="update-product" href="#"> Cập nhật </a>
@@ -81,7 +81,7 @@
                     </div>
 
 
-                    <div class="product">
+                    <div id="product1" class="product">
                         <div class="product-image">
                             <img src="img/pro12.jpg">
                         </div>
@@ -95,9 +95,9 @@
                         </div>
                         <div id="buttonwrap" class="product-state">
                             <div class="product-removal">
-                                <a id="remove" class="remove-product">
+                                <button id="remove" class="remove-product">
                                     Xóa bỏ
-                                </a>
+                                </button>
                             </div>
                             <div class="product-update">
                                 <a id="update" class="update-product" href="#"> Cập nhật </a>
@@ -128,18 +128,20 @@
 
                     <a href="checkout.html" class="checkout"> Thanh toán</a>
                 </div>
-			</div>
-			</form>
-		</div>
-			<!-- partial -->
-			<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            <script src="shopping.js"></script>
-            <script>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- partial -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="shopping.js"></script>
+    <script>
         $(function () {
             $("#nav-placeholder").load("navbar.html");
         });
-            </script>
+    </script>
 </body>
 </html>

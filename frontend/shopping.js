@@ -1,4 +1,4 @@
-/* Set rates + misc */
+﻿/* Set rates + misc */
 var taxRate = 10.000;
 var shippingRate = 25.000; 
 var fadeTime = 300;
@@ -9,9 +9,17 @@ $('.product-quantity input').change( function() {
   updateQuantity(this);
 });
 
+/* Không hoạt động >:c
 $('.product-removal button').click( function() {
   removeItem(this);
 });
+*/
+$('.product-removal button').click( function() {
+     var elms = document.querySelectorAll("[id='product1']");
+    for(var i = 0; i < elms.length; i++) 
+    elms[i].remove();
+}); 
+
 
 
 /* Recalculate cart */
@@ -20,7 +28,7 @@ function recalculateCart()
   var subtotal = 0;
   
   /* Sum up row totals */
-  $('.product').each(function () {
+  $('.product').each( function () {
     subtotal += parseFloat($(this).children('.product-line-price').text());
   });
   
