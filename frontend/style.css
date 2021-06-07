@@ -150,6 +150,10 @@ form {
     border: 10px solid #f1f1f1;
 }
 
+form1 {
+    border: none;
+}
+
 /* Full-width inputs */
 input[type=Email], input[type=password], input[type=name], input[type=adress], input[type=date] {
     width: 100%;
@@ -719,46 +723,27 @@ nav {
         /* Styling the search box where the 
             input would be given */
         nav .searchbar input[type="text"] {
-            border: 0;
-            padding: 0;
-            width: 0px;
-            height: 35px;
-            border-radius: 3px;
-            transition: all 0.3s ease;
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
         }
 
         /* Styling the search bar icon */
-        nav .searchbar .icon {
-            display: flex;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 35px;
-            height: 100%;
-            background: none;
-            border-radius: 3px;
-            color: #fff;
-            transition: all 0.5s 0.3s ease;
+        nav .searchbar .button {
+            background-color: darkred;
+            color: #f2f2f2;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+            width:32px;
+            height:32px;
         }
 
-            nav .searchbar .icon i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                cursor: pointer;
-            }
-
-            nav .searchbar .icon.active {
-                background: darkred;
-                transition: all 0.3s ease;
-            }
-
-        nav .searchbar input[type="text"].active {
-            width: 250px;
-            padding: 0 10px;
-            transition: all 0.5s 0.2s ease;
-        }
+   
 
     nav .licon li {
         list-style: none;
