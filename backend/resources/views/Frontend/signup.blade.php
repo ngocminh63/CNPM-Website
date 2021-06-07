@@ -60,7 +60,7 @@
                 </div>
 
                 <label for="birthday"><b>Số Điện Thoại</b></label>
-                <input type="number" id="birthday" name="phone" required>
+                <input type="phone" id="birthday" name="phone" required>
                 {!! showErrors($errors,'phone') !!}
 
                 <label for="adress"><b>Địa chỉ</b></label>

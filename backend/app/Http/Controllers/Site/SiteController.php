@@ -25,8 +25,10 @@ class SiteController extends Controller
 
         $customer = Customer::where('email','=',$email)->where('password','=',md5($password))->count();
         if($customer>0){
+            $customers = Customer::where('email','=',$email)->first();
             $request->session()->put('logined', 'true');
-            return redirect()->route('giohang');
+            $request->session()->put('user', $customers->id);
+            return redirect()->route('sanpham.index');
         }else{
             return redirect()->back()->with('error','Sai email hoặc mật khẩu')->withInput();
 
@@ -69,7 +71,9 @@ class SiteController extends Controller
 
     public function dangxuat(Request $request){
         $request->session()->forget('logined');
-        return view('index');
+        $request->session()->forget('cart');
+        $request->session()->forget('user');
+        return redirect()->route('trangchu');
     }
 }
 
