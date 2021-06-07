@@ -108,9 +108,20 @@ Route::group(['prefix' => '/', 'namespace' =>'Site'], function() {
 
     Route::prefix('san-pham')->group(function(){
         Route::get('/', [SiteProductController::class, 'index'])->name('sanpham.index');
+        Route::post('/tim-kiem', [SiteProductController::class, 'timKiem'])->name('sanpham.timkiem');
     });
 
-    Route::get('/gio-hang', [CartController::class, 'giohang'])->name('giohang');
+    Route::prefix('gio-hang')->group(function(){
+
+        Route::get('/', [CartController::class, 'giohang'])->name('giohang');
+        Route::get('/gio-hang.them/{id}', [CartController::class, 'gioHangThem'])->name('giohang.them');
+        Route::get('/gio-hang.sua', [CartController::class, 'gioHangSua'])->name('giohang.sua');
+        Route::get('/gio-hang.xoa', [CartController::class, 'gioHangXoa'])->name('giohang.xoa');
+        Route::get('/xac-nhan-thanh-toan', [CartController::class, 'thanhToan'])->name('giohang.thanhtoan');
+        Route::post('/xac-nhan-thanh-toan', [CartController::class, 'xlThanhToan'])->name('giohang.xlthanhtoan');
+
+    });
+    Route::get('/chi-phi/{id}', [CartController::class, 'ChiPhi'])->name('chiphi');
 
     
 });

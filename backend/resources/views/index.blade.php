@@ -19,6 +19,7 @@
                     <li><a href="{{route('giohang')}}">Giỏ hàng</a></li>
                     <li><a href="{{route('dangky')}}">Đăng ký</a></li>
                     <li><a href="{{route('dangnhap')}}">Đăng nhập</a></li>
+                    <li><a href="{{route('login')}}">Admin</a></li>
                 </div>  
         
 

@@ -6,7 +6,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
 </head>
 <body>
     <div class="wrapper2">
@@ -23,10 +23,11 @@
                 </div>  
         
                 <div class="searchbar">
-                    <input type="text" placeholder="Tìm kiếm">
-                    <div class="icon">
-                        <i class="bi bi-search"></i>
-                    </div>
+                    <form action="{{route('sanpham.timkiem')}}", method="post">
+                        @csrf
+                        <input type="text" placeholder="Tìm kiếm" name="search">
+                        <button class="button" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
                 </div>
             </nav>
         </div>
@@ -36,6 +37,7 @@
             <h1 class="style">Sản phẩm</h1>
        
         <div class="row">
+
             @foreach($products as $key => $product)
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid">
@@ -46,7 +48,10 @@
 
                         <ul class="social">
                             <li><a href="#" data-tip="Xem nhanh"> <i class="bi bi-search"></i></a></li>
-                            <li><a href="" data-tip="Thêm vào giỏ hàng"><i class="bi bi-cart"></i></a></li>
+                            <li><a href="#"
+                                class="add_to_cart"
+                                data-url="{{route('giohang.them', ['id' => $product->id])}}"
+                                data-tip="Thêm vào giỏ hàng"><i class="bi bi-cart"></i></a></li>
                         </ul>
 
                         <span class="product-new-label">Sale</span>
@@ -90,6 +95,28 @@
                 $("input[type='text']").toggleClass("active");
             });
         });
+    </script>
+    <script>
+        function addToCart(event){
+            event.preventDefault();
+            let urlCart = $(this).data('url');
+            $.ajax({
+                type: "GET",
+                url: urlCart,
+                dataType: 'json',
+                success: function(data){
+                    if(data.code === 200){
+                        alert('Thêm sản phẩm vào giỏ hàng thành công.');
+                    }
+                },
+                error: function(){
+
+                },
+            });
+        }
+        $(function(){
+            $('.add_to_cart').on('click', addToCart);
+        })
     </script>
 </body>
 </html>
